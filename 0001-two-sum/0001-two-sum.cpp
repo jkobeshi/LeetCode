@@ -11,12 +11,6 @@ public:
             firToSec[nums[i]] = i;
 
         }
-        for (int i = 1; i < nums.size(); ++i){
-            auto it = firToSec.find(target - nums[i]);
-            if (it != firToSec.end() && i != it->second){
-                return {i, it->second};
-            }
-        }
         return {};
     }
 };
