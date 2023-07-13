@@ -8,11 +8,8 @@ public:
         for(auto it = m.begin(); it != m.end(); ++it)
             buck[it->second - 1].push_back(it->first);
         for(int i = buck.size() - 1; i >= 0; --i){
-            for(int j = 0; j < buck[i].size(); ++j){
-                res.push_back(buck[i][j]);
-                --k;
-                if(k == 0) return res;
-            }
+            if(k <= res.size()) break;
+            if(!buck[i].empty()) res.insert(res.end(), buck[i].begin(), buck[i].end());   
         }
         return res;
     }
