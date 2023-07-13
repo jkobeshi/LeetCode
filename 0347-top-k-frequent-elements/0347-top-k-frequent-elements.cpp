@@ -10,7 +10,7 @@ public:
         for(int i = buck.size() - 1; i >= 0; --i){
             if(k <= res.size()) break;
             if(!buck[i].empty()) res.insert(res.end(), buck[i].begin(), buck[i].end());   
-        }
+        } 
         return res;
     }
 };
