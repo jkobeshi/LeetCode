@@ -25,6 +25,6 @@ public:
             newHead = temp;
         }
         beg->next = reverseKGroup(newHead, k); 
-        return head; 
+        return head;  
     }
 };
