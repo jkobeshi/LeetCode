@@ -24,14 +24,10 @@ public:
         int res = pre;
         for(int i = 1; i < s.size(); ++i){
             int cur = LtoI(s[i]);
-            if (cur <= pre){
-                res += cur;
-                pre = cur;
-            }
-            else{
-                res = res - pre + (cur - pre);
-                pre = cur;
-            }
+            if (cur > pre)
+                res -= 2 * pre;
+            res += cur;
+            pre = cur;
         }
         return res;
     }
